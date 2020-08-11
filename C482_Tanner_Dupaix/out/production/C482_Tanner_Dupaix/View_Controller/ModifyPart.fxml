@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="337.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyPartController">
+    <Pane prefHeight="37.0" prefWidth="605.0">
+        <Text layoutX="38.0" layoutY="24.0" text="Modify Part" />
+        <RadioButton fx:id="inHouse" layoutX="199.0" layoutY="11.0" onAction="#displayMachine" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="partToggleGroup" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="outSourced" layoutX="300.0" layoutY="11.0" onAction="#displayMachine" text="Outsourced" toggleGroup="$partToggleGroup" />
+    </Pane>
+    <Text text=" " GridPane.rowIndex="1" />
+    <Text text="ID" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets left="80.0" />
+        </GridPane.margin></Text>
+    <TextField fx:id="partID" disable="true" maxWidth="150.0" prefWidth="0.0" text="Auto Gen - Disabled" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets right="80.0" />
+        </GridPane.margin></TextField>
+    <Text text=" " GridPane.rowIndex="3" />
+    <Text text="Name" GridPane.columnIndex="0" GridPane.rowIndex="4">
+        <GridPane.margin>
+            <Insets left="80.0" />
+        </GridPane.margin></Text>
+    <TextField fx:id="partName" maxWidth="150.0" prefWidth="0.0" promptText="Part Name" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+        <GridPane.margin>
+            <Insets right="80.0" />
+        </GridPane.margin></TextField>
+    <Text text=" " GridPane.rowIndex="5" />
+    <Text text="Inv" GridPane.columnIndex="0" GridPane.rowIndex="6">
+        <GridPane.margin>
+            <Insets left="80.0" />
+        </GridPane.margin></Text>
+    <TextField fx:id="partStock" maxWidth="150.0" prefWidth="0.0" promptText="Inv" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+        <GridPane.margin>
+            <Insets right="80.0" />
+        </GridPane.margin></TextField>
+    <Text text=" " GridPane.rowIndex="7" />
+    <Text text="Price/Cost" GridPane.columnIndex="0" GridPane.rowIndex="8">
+        <GridPane.margin>
+            <Insets left="80.0" />
+        </GridPane.margin></Text>
+    <TextField fx:id="partPrice" maxWidth="150.0" prefWidth="0.0" promptText="Price/Cost" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+        <GridPane.margin>
+            <Insets right="80.0" />
+        </GridPane.margin></TextField>
+    <Text text=" " GridPane.rowIndex="9" />
+    <Text text="Max" GridPane.columnIndex="0" GridPane.rowIndex="10">
+        <GridPane.margin>
+            <Insets left="80.0" />
+        </GridPane.margin></Text>
+    <TextField fx:id="partMax" maxWidth="100.0" prefWidth="0.0" promptText="Max" GridPane.halignment="CENTER" GridPane.rowIndex="10">
+        <GridPane.margin>
+            <Insets right="130.0" />
+        </GridPane.margin></TextField>
+    <Text text="Min" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="10">
+        <GridPane.margin>
+            <Insets left="80.0" />
+        </GridPane.margin></Text>
+    <TextField fx:id="partMin" maxWidth="100.0" prefWidth="89.0" promptText="Min" GridPane.halignment="RIGHT" GridPane.rowIndex="10">
+        <GridPane.margin>
+            <Insets right="140.0" />
+        </GridPane.margin></TextField>
+    <Text text=" " GridPane.rowIndex="11" />
+    <Text fx:id="cmpName" text="Machine ID" GridPane.columnIndex="0" GridPane.rowIndex="12">
+        <GridPane.margin>
+            <Insets left="80.0" />
+        </GridPane.margin></Text>
+    <TextField fx:id="cmpNameTxt" maxWidth="150.0" prefWidth="0.0" promptText="Mach ID" GridPane.halignment="CENTER" GridPane.rowIndex="12">
+        <GridPane.margin>
+            <Insets right="80.0" />
+        </GridPane.margin></TextField>
+    <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13">
+        <children>
+            <Button fx:id="save" alignment="CENTER" layoutX="300.0" layoutY="5.0" mnemonicParsing="false" onAction="#saveButton" prefWidth="80.0" text="Save" />
+            <Button fx:id="cnclButton" layoutX="403.0" layoutY="5.0" mnemonicParsing="false" onAction="#cancelButton" prefWidth="80.0" text="Cancel" />
+        </children>
+    </Pane>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints maxHeight="37.0" minHeight="37.0" prefHeight="37.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>
